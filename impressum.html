@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum — rose-it.dev</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="/fonts/fonts.css" />
+  <style>
+    :root {
+      --black:  #080808;
+      --coal:   #111111;
+      --ash:    #1c1c1c;
+      --ember:  #f97316;
+      --gold:   #fbbf24;
+      --grey:   #6b7280;
+      --light:  #e5e7eb;
+      --white:  #f9fafb;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--light);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.25rem 3rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(8,8,8,0.95);
+      border-bottom: 1px solid rgba(249,115,22,0.1);
+    }
+    .nav-logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem; font-weight: 700;
+      color: var(--white); text-decoration: none; letter-spacing: 0.05em;
+    }
+    .nav-logo span { color: var(--ember); }
+    .nav-back {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .8rem; color: var(--grey);
+      text-decoration: none; letter-spacing: 0.08em;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--ember); }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 8rem 2rem 6rem;
+    }
+
+    .page-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .7rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--ember); margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 5rem);
+      letter-spacing: .04em; line-height: 1;
+      color: var(--white); margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .75rem; font-weight: 700;
+      letter-spacing: .15em; text-transform: uppercase;
+      color: var(--ember); margin: 2.5rem 0 .75rem;
+    }
+    p, address {
+      color: var(--light); font-style: normal;
+      margin-bottom: .5rem; line-height: 1.8;
+    }
+    a { color: var(--ember); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--ember) 0%, transparent 100%);
+      margin: 3rem 0; opacity: .3;
+    }
+
+    footer {
+      text-align: center; padding: 2rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .7rem; color: var(--grey);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    footer a { color: var(--grey); }
+    footer a:hover { color: var(--ember); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">rose<span>it</span>.dev</a>
+    <a href="/" class="nav-back">← Zurück</a>
+  </nav>
+
+  <main>
+    <div class="page-label">Rechtliches</div>
+    <h1>IMPRESSUM</h1>
+
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <address>
+      Sven Rosemann<br />
+      Von-Möller-Straße 16<br />
+      33649 Bielefeld
+    </address>
+
+    <h2>Kontakt</h2>
+    <p>E-Mail: <a href="mailto:sven.rosemann@rose-it.dev">sven.rosemann@rose-it.dev</a></p>
+
+    <div class="divider"></div>
+
+    <h2>Berufliche Tätigkeit</h2>
+    <p>IT-Beratung &amp; KI-Consulting als Nebengewerbe.<br />
+    Hauptberuflich tätig als Service Owner KI bei der Cassini Consulting AG, Bielefeld.</p>
+
+    <div class="divider"></div>
+
+    <h2>Haftung für Inhalte</h2>
+    <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
+
+    <h2>Haftung für Links</h2>
+    <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte kein Einfluss besteht. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.</p>
+
+    <h2>Urheberrecht</h2>
+    <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+  </main>
+
+  <footer>
+    <a href="/">rose-it.dev</a> &nbsp;·&nbsp;
+    <a href="/impressum.html">Impressum</a> &nbsp;·&nbsp;
+    <a href="/datenschutz.html">Datenschutz</a>
+  </footer>
+
+</body>
+</html>
