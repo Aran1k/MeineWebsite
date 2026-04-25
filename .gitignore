@@ -1,0 +1,16 @@
+# Deploy scripts (contain server credentials)
+deploy.py
+redeploy.py
+rescue_setup.py
+firewall_open.py
+selfhost_fonts.py
+setup_ssl.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db

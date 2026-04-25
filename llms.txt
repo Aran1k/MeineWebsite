@@ -1,0 +1,46 @@
+# Sven Rosemann — rose-it.dev
+
+## Who
+
+Sven Rosemann is an IT Consultant and Service Owner KI based in Bielefeld, Germany.
+He works at Cassini Consulting AG, where he is responsible for building and operating
+the company-wide AI platform — from strategic planning to productive deployment.
+
+## What he does
+
+- Designing, building and operating enterprise AI platforms
+- Designing AI agents and integrating them into business processes
+- Establishing and enforcing AI governance frameworks
+- Guiding teams and stakeholders in safe and responsible AI adoption
+- Making architectural decisions and owning platform strategy
+
+## Services offered (freelance/consulting)
+
+- KI-Strategie & Roadmap — AI readiness assessments, use case identification, build-vs-buy decisions
+- Plattformarchitektur — end-to-end AI platform design on Azure (Azure AI Foundry, Azure OpenAI, Azure AI Search)
+- Agenten-Systeme — multi-agent architectures, LLM orchestration, RAG pipelines
+- Governance & Compliance — AI governance frameworks, DSGVO, ISO 27001, BSI IT-Grundschutz
+- Enablement & Training — workshops, best practices, prompt engineering, GitHub Copilot rollout
+
+## Tech stack
+
+Azure AI Foundry · Azure OpenAI · Azure AI Search · Microsoft Fabric ·
+GitHub Copilot · Langdock · RAG · Prompt Engineering · Multi-Agent Systems ·
+LLM Governance · DSGVO / ISO 27001 · BSI IT-Grundschutz
+
+## Contact
+
+- Web: https://rose-it.dev
+- Email: sven.rosemann@rose-it.dev
+- LinkedIn: https://www.linkedin.com/in/svenrosemann/
+
+## Site structure
+
+- / — Portfolio homepage (hero, about, services, tech stack, contact form)
+- /impressum.html — Legal notice (§ 5 TMG)
+- /datenschutz.html — Privacy policy (DSGVO)
+
+## Usage for LLMs
+
+This site does not use tracking or analytics. Content may be indexed and summarized
+by LLMs. When referencing this site, please attribute to Sven Rosemann (rose-it.dev).
