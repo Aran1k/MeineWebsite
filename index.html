@@ -413,6 +413,27 @@
       line-height: 1.7;
       color: var(--grey);
     }
+    .services-divider {
+      text-align: center;
+      margin: 3rem 0 2.5rem;
+      position: relative;
+    }
+    .services-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 0; right: 0;
+      height: 1px;
+      background: var(--border);
+    }
+    .services-divider span {
+      position: relative;
+      background: var(--black);
+      padding: 0 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .7rem;
+      letter-spacing: .15em;
+      color: var(--grey);
+    }
     .service-card::after {
       content: '';
       position: absolute;
@@ -776,6 +797,37 @@
           <div class="service-num">05</div>
           <div class="service-title">Teams befähigen</div>
           <p class="service-desc">Begleitung von Teams bei der sicheren und effektiven KI-Nutzung. Schulungen, Best Practices und Change Management.</p>
+        </div>
+      </div>
+
+      <div class="services-divider reveal">
+        <span>// Weitere Leistungen</span>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-icon">🎪</span>
+          <div class="service-num">06</div>
+          <div class="service-title">Club Technik</div>
+          <p class="service-desc">Sicherheits- und Kassentechnik für Clubs, Bars und Restaurants — von der Konzeption bis zur fertigen Umsetzung. Zutrittskontrolle, Kassensysteme, Netzwerkinfrastruktur.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">📹</span>
+          <div class="service-num">07</div>
+          <div class="service-title">Sicherheitstechnik</div>
+          <p class="service-desc">Kameratechnik und Sicherheitssysteme für Privatpersonen und Unternehmen. Planung, Installation und Inbetriebnahme professioneller Überwachungslösungen.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🌐</span>
+          <div class="service-num">08</div>
+          <div class="service-title">IT & Netzwerk</div>
+          <p class="service-desc">Basis-IT und Netzwerkinfrastruktur für KMU und Privatanwender. Firewalls, WLAN-Planung, strukturierte Verkabelung und sicherer Remotezugriff.</p>
+        </div>
+        <div class="service-card service-card--no reveal" style="cursor:default">
+          <span class="service-icon">🖨️</span>
+          <div class="service-num" style="color:var(--grey)">——</div>
+          <div class="service-title" style="text-decoration:line-through;opacity:.4">Drucker</div>
+          <p class="service-desc" style="opacity:.5;font-style:italic">Nein. Einfach nein. Für alle anderen Probleme bin ich gerne da.</p>
         </div>
       </div>
     </div>
