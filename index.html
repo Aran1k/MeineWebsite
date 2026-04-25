@@ -491,7 +491,64 @@
       color: rgba(245,240,235,0.5);
       margin-top: 1.5rem;
     }
-    .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+    /* CONTACT FORM */
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .cf-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .6rem; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--ember); display: block; margin-bottom: .4rem;
+    }
+    .cf-input, .cf-textarea {
+      width: 100%;
+      background: var(--ash);
+      border: 1px solid var(--border);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .95rem;
+      padding: .8rem 1rem;
+      outline: none;
+      transition: border-color .2s;
+      resize: none;
+    }
+    .cf-input:focus, .cf-textarea:focus { border-color: var(--ember); }
+    .cf-input::placeholder, .cf-textarea::placeholder { color: var(--grey); }
+    .cf-submit {
+      background: var(--ember);
+      color: #000;
+      border: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      transition: background .2s, transform .1s;
+      align-self: flex-start;
+    }
+    .cf-submit:hover { background: var(--gold); }
+    .cf-submit:active { transform: scale(.98); }
+    .cf-submit:disabled { opacity: .5; cursor: not-allowed; }
+    .cf-success {
+      display: none;
+      border: 1px solid rgba(249,115,22,.3);
+      background: rgba(249,115,22,.05);
+      padding: 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .8rem;
+      color: var(--ember);
+      letter-spacing: .05em;
+    }
+    .contact-divider {
+      display: flex; align-items: center; gap: 1rem; margin: .5rem 0;
+      font-family: 'JetBrains Mono', monospace; font-size: .6rem;
+      letter-spacing: .15em; color: var(--grey); text-transform: uppercase;
+    }
+    .contact-divider::before, .contact-divider::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+    .contact-links { display: flex; flex-direction: column; gap: .75rem; }
     .contact-link {
       display: flex;
       align-items: center;
@@ -779,31 +836,61 @@
           Austausch.
         </p>
       </div>
-      <div class="contact-links reveal">
-        <a href="https://www.linkedin.com/in/svenrosemann/" class="contact-link" target="_blank">
-          <div class="contact-link-icon">in</div>
-          <div class="contact-link-info">
-            <span class="contact-link-label">LinkedIn</span>
-            <span class="contact-link-value">Sven Rosemann</span>
+      <div class="reveal">
+        <!-- CONTACT FORM -->
+        <form class="contact-form" id="contact-form"
+              action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="3210b31a-7862-43ee-a57d-16b47df4a923" />
+          <input type="hidden" name="subject" value="Neue Anfrage über rose-it.dev" />
+          <input type="hidden" name="from_name" value="rose-it.dev Kontaktformular" />
+          <input type="hidden" name="redirect" value="false" />
+          <input type="checkbox" name="botcheck" style="display:none" />
+
+          <div class="form-row">
+            <div>
+              <label class="cf-label">Name</label>
+              <input class="cf-input" type="text" name="name" placeholder="Max Mustermann" required />
+            </div>
+            <div>
+              <label class="cf-label">E-Mail</label>
+              <input class="cf-input" type="email" name="email" placeholder="max@beispiel.de" required />
+            </div>
           </div>
-          <span class="contact-link-arrow">→</span>
-        </a>
-        <a href="https://www.cassini.de" class="contact-link" target="_blank">
-          <div class="contact-link-icon">🏢</div>
-          <div class="contact-link-info">
-            <span class="contact-link-label">Unternehmen</span>
-            <span class="contact-link-value">Cassini Consulting AG</span>
+          <div>
+            <label class="cf-label">Betreff</label>
+            <input class="cf-input" type="text" name="subject_user" placeholder="KI-Strategie, Plattformaufbau, …" />
           </div>
-          <span class="contact-link-arrow">→</span>
-        </a>
-        <a href="mailto:sven.rosemann@rose-it.dev" class="contact-link">
-          <div class="contact-link-icon">@</div>
-          <div class="contact-link-info">
-            <span class="contact-link-label">E-Mail</span>
-            <span class="contact-link-value">sven.rosemann@rose-it.dev</span>
+          <div>
+            <label class="cf-label">Nachricht</label>
+            <textarea class="cf-textarea" name="message" rows="5"
+              placeholder="Beschreib kurz dein Projekt oder dein Anliegen …" required></textarea>
           </div>
-          <span class="contact-link-arrow">→</span>
-        </a>
+          <button type="submit" class="cf-submit" id="cf-btn">→ NACHRICHT SENDEN</button>
+          <div class="cf-success" id="cf-success">
+            ✓ Nachricht gesendet — ich melde mich so schnell wie möglich.
+          </div>
+        </form>
+
+        <div class="contact-divider" style="margin-top:2rem">oder direkt erreichen</div>
+
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/svenrosemann/" class="contact-link" target="_blank">
+            <div class="contact-link-icon">in</div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">Sven Rosemann</span>
+            </div>
+            <span class="contact-link-arrow">→</span>
+          </a>
+          <a href="mailto:sven.rosemann@rose-it.dev" class="contact-link">
+            <div class="contact-link-icon">@</div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">E-Mail</span>
+              <span class="contact-link-value">sven.rosemann@rose-it.dev</span>
+            </div>
+            <span class="contact-link-arrow">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -874,6 +961,36 @@
     }, { threshold: 0.1 });
     reveals.forEach(r => observer.observe(r));
 
+    // Contact Form
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('cf-btn');
+        btn.disabled = true;
+        btn.textContent = '// Senden…';
+        const data = new FormData(contactForm);
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST', body: data
+          });
+          const json = await res.json();
+          if (json.success) {
+            contactForm.querySelectorAll('input:not([type=hidden]),textarea').forEach(el => el.value = '');
+            document.getElementById('cf-success').style.display = 'block';
+            btn.style.display = 'none';
+          } else {
+            btn.disabled = false;
+            btn.textContent = '→ NACHRICHT SENDEN';
+            alert('Fehler beim Senden. Bitte versuche es erneut.');
+          }
+        } catch {
+          btn.disabled = false;
+          btn.textContent = '→ NACHRICHT SENDEN';
+          alert('Netzwerkfehler. Bitte versuche es erneut.');
+        }
+      });
+    }
   </script>
 </body>
 </html>
