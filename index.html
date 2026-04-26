@@ -1022,10 +1022,13 @@
         const btn = document.getElementById('cf-btn');
         btn.disabled = true;
         btn.textContent = '// Senden…';
-        const data = new FormData(contactForm);
+        const fd = new FormData(contactForm);
+        const payload = Object.fromEntries(fd.entries());
         try {
           const res = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST', body: data
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
           });
           const json = await res.json();
           if (json.success) {
@@ -1035,12 +1038,12 @@
           } else {
             btn.disabled = false;
             btn.textContent = '→ NACHRICHT SENDEN';
-            alert('Fehler beim Senden. Bitte versuche es erneut.');
+            alert('Fehler: ' + (json.message || 'Bitte erneut versuchen.'));
           }
-        } catch {
+        } catch(err) {
           btn.disabled = false;
           btn.textContent = '→ NACHRICHT SENDEN';
-          alert('Netzwerkfehler. Bitte versuche es erneut.');
+          alert('Netzwerkfehler. Bitte erneut versuchen.');
         }
       });
     }
