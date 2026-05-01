@@ -4,6 +4,8 @@
 *.secrets
 
 # Deploy scripts (contain server credentials)
+check_web3forms.py
+upload_static.py
 deploy.py
 redeploy.py
 rescue_setup.py
